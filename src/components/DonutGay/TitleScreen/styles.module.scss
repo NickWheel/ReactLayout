@@ -1,0 +1,191 @@
+@import '../variables_course.scss';
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(../fonts/ProximaNova-Bold.ttf);
+    font-size: 16px; 
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaExtrabld';
+    src: url(../fonts/ProximaNova-Extrabld.ttf);
+    font-size: 24px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url(../fonts/ProximaNova-Semibold.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'Intro';
+    src: url(../fonts/Intro.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, a, li {
+    text-decoration: none;
+    list-style: none;
+    color: black;   
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1160px;
+}
+
+.title_screen {
+  position: relative;
+  z-index: 2;
+  min-height: 60vh;
+  padding-top: 120px;
+  background-color: #56C3E0;
+  overflow: hidden;
+  &::before {
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      bottom: 0;
+      content: url(../img/freakin_fkin_kid_cut.png);
+      transform: translateY(4px)
+  }
+  .stripe {
+      position: relative;
+      width: 30%;
+      border-radius: 0px 3px 3px 0px;
+      // margin-top: 80px;
+      padding: 20px 30px 20px 10%;
+      left: 0;
+      background-color: $dark;
+      
+      h1 {
+          font-family: 'Intro';
+          font-size: 2.5em;
+          font-weight: normal;
+          color: #fff;
+      }
+  }
+  .container {
+      position: relative;
+      .title_text {
+          margin: 20px 0 60px 0;
+          width: 400px;
+          font-family: 'ProximaNovaBold';
+          color: $dark;
+      }
+      .progress_bar_empty {
+          position: relative;
+          height: 14px;
+          max-width: 400px;
+          background-color: #fff;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+
+          .progress_bar_filled {
+              position: relative;
+              height: 8px;
+              width: 60%;
+              background-color: #0A94D1;
+              border-radius: 2px;
+              margin: 0 3px;
+          }
+      }
+      .progress_text {
+          margin-top: 10px;
+          margin-bottom: 40px;
+          display: flex;
+          align-items: center;
+          color: $dark;
+          font-family: 'ProximaNovaBold';
+  
+          div {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              width: 200px;
+              p {
+                  font-size: 2.5em;
+                  font-family: 'ProximaNovabold';
+  
+              }
+              span {
+                  margin-left: 10px;
+                  width: 5px;
+                  font-family: 'ProximaNovaSemibold';
+                  font-size: 0.9em;
+              }
+          }
+      }
+  }
+  .title_bottom_text {
+      position: absolute;
+      margin: 0 0 10px 10%;
+      font-size: 24px;
+      color: #fff;
+      font-family: 'ProximaNovabold';
+      bottom: 0;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .title_screen {
+      &::before {
+          content: url(../img/freakin_fkin_kid_cut.png);
+          transform: translate(100px, 64px) scale(0.8);
+      }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title_screen {
+      &::before {
+          transform: translate(180px, 123px) scale(0.6);
+      }
+      .stripe {
+          width: 60%;
+      }
+  }
+}
+@media screen and (max-width: 900px) {
+.title_screen {
+      &::before {
+          transform: scale(0);
+
+      }
+  }
+}
+@media screen and (max-width: 480px) {
+
+  .title_screen {
+      .stripe {
+          width: 75%;
+          h1 {
+              font-size: 28px;
+          }
+      }
+      .container {
+          width: 90%;
+          .title_text {
+              position: relative;
+              width: 90%;
+          }
+          .progress_text {
+              margin-bottom: 0;
+          }
+      }
+      .title_bottom_text {
+          margin: 0 0 10px 5%;
+          position: relative;
+      }
+  }
+}
