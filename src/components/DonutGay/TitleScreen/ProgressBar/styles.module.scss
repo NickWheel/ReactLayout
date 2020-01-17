@@ -1,0 +1,86 @@
+@import '../../variables_course.scss';
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(../../fonts/ProximaNova-Bold.ttf);
+    font-size: 16px; 
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaExtrabld';
+    src: url(../../fonts/ProximaNova-Extrabld.ttf);
+    font-size: 24px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url(../../fonts/ProximaNova-Regular.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url(../../fonts/ProximaNova-Semibold.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'Intro';
+    src: url(../../fonts/Intro.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, a, li {
+    text-decoration: none;
+    list-style: none;
+    color: black;   
+}
+
+.progress_bar_empty {
+  position: relative;
+  height: 14px;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+
+  .progress_bar_filled {
+      position: relative;
+      height: 8px;
+      width: 60%;
+      background-color: #0A94D1;
+      border-radius: 2px;
+      margin: 0 3px;
+  }
+}
+.progress_text {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  color: $dark;
+  font-family: 'ProximaNovaBold';
+
+  div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 200px;
+      p {
+          font-size: 2.5em;
+          font-family: 'ProximaNovabold';
+
+      }
+      span {
+          margin-left: 10px;
+          width: 5px;
+          font-family: 'ProximaNovaSemibold';
+          font-size: 0.9em;
+      }
+  }
+}

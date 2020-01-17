@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styles from './styles.module.scss';
+import Logo from '../img/logo.svg';
+import ProfileLogo from '../img/user.svg'
 
 export default class extends Component{
   render() {
@@ -7,14 +9,14 @@ export default class extends Component{
       <header>
         <div className={styles.container}>
           <a href="google.com">
-            <img className={styles.karpachoff_logo} src="../img/logo.svg" alt="karpachoff_logo" />
+            <img className={styles.karpachoff_logo} src={Logo} alt="karpachoff_logo" />
           </a>
           <ul>
             <a href="google.com">Главная</a>
             <a href="google.com">Материалы для вас</a>
             <a href="google.com">Календарь курсов</a>
             <a href="google.com">
-              <img src="../img/user.svg" alt="profile_logo" />
+              <img src={ProfileLogo} alt="profile_logo" />
               Профиль
             </a>
           </ul>
