@@ -14,7 +14,7 @@ export default class extends Component{
     return (
       <>
         <div className={styles.progress_bar_empty}>
-          {/* progress_bar_filled has position: relative property in css. */}
+          {/* progress_bar_filled has position: relative property in css file. */}
           {/* So the width of filled progress bar is set in % */}
           <div className={styles.progress_bar_filled} style={{width: this.calculateProgress()}} >
           </div>

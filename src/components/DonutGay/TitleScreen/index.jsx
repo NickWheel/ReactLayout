@@ -15,11 +15,14 @@ export default class extends Component{
           <p className={styles.title_text}>
             Прохождение этой темы позволит вам избежать частных ошибок при воспитании детей от 0 до 3 лет. Результат - правильные и четкие шаги для достижения цели.
           </p>
-          <ProgressBar maxThemes={13} currentThemes={3} />
+          <ProgressBar maxThemes={13} currentThemes={5} />
           <ArticleName name={'Название актуальной темы'}/>
         </div>
       </section>
-      <UnderMainScreen theme2={'Академия родительского мастерства'} theme3={'Модуль 12'}/>
+      <UnderMainScreen themes={[
+        'Академия родительского мастерства',
+        'Модуль 12',
+      ]}/>
       </>
     );
   }

@@ -6,22 +6,27 @@ export default class extends Component{
     super(props);
     this.calculateThemesQuantity = this.calculateThemesQuantity.bind(this);
   }
+  calculateThemesQuantity(){
+    const content = this.props.themes.map((prop)=>{
+            return (
+              <>
+                <div className={styles.short_line} />
+                <a href="#">{prop}</a>
+              </>
+            )
+          })
+    return content;
+  }
   render() {
     return (
       <section className={styles.under_main_screen}>
         <div className={styles.container}>
           <a href="#">{this.props.theme1}</a>
-          <div className={styles.short_line} />
-          <a href="#">{this.props.theme2}</a>
-          <div className={styles.short_line} />
-          <a href="#">{this.props.theme3}</a>
+          {this.calculateThemesQuantity()}
         </div>
       </section>
     );
   }
-  // calculateThemesQuantity(){
-  //   this.props.themes
-  // }
   static defaultProps = {
     theme1: 'Главная',
   }

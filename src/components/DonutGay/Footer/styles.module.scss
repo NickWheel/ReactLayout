@@ -1,0 +1,155 @@
+@import '../variables_course.scss';
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(../fonts/ProximaNova-Bold.ttf);
+    font-size: 16px; 
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaExtrabld';
+    src: url(../fonts/ProximaNova-Extrabld.ttf);
+    font-size: 24px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url(../fonts/ProximaNova-Semibold.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'Intro';
+    src: url(../fonts/Intro.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, a, li {
+    text-decoration: none;
+    list-style: none;
+    color: black;   
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1160px;
+}
+
+footer {
+  padding: 40px 0;
+  width: 100%;
+  background-color: $blue;
+  color: #fff;
+  position: relative;
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items:  flex-start;
+      .footer_card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items:  flex-start;
+          .title_text {
+              font-size: 24px;
+              font-family: 'ProximaNovaBold';
+          }
+          .short_line{
+              height: 3px;
+              width: 30px;
+              background-color: #fff;
+              border-radius: 1px;
+              margin: 5px 0 20px 0;
+          }
+          p {
+              font-family: 'ProximaNovaSemibold';
+              margin-bottom: 10px;
+              transition: all 0.3s;
+              transform: translateX(0px);
+              &:not(.title_text):hover {
+                  transform: translateX(10px);
+              }
+          }
+          a {
+              color: #fff;
+              font-family: 'ProximaNovaSemibold';
+              padding: 5px 10px 5px 0px;
+              transition: all 0.3s;
+              transform: translateX(0px);
+              &:hover {
+                  transform: translateX(10px);
+              }
+          }
+          .phone {
+              font-family: 'ProximaNovaSemibold';
+              margin-bottom: 0;
+              padding: 5px 10px 5px 0px;
+          }
+      }
+  }
+}
+.footer_line {
+  background-color: #222B3A;
+  height: 50px;
+  bottom: 0;
+}
+@media screen and (max-width: 900px) {
+  footer {
+      .container {
+          position: relative;
+          .footer_card {
+              position: relative;
+              &:nth-child(1) {
+                  display: none;
+              }
+              &:nth-child(2) {
+                  display: none;
+              }
+              &:nth-child(3) {
+                  display: none;
+              }
+              &:nth-child(4) {
+                  position: relative;
+                  a:nth-of-type(1) {
+                      &::before {
+                      position: relative;
+                      margin-right: 15px;
+                      content: url(./img/phone.svg);
+                      }
+}
+                  a:nth-of-type(2) {
+                      &::before {
+                      position: relative;
+                      margin-right: 15px;
+                      content: url(./img/phone.svg);
+                      }
+                  }
+                  p:nth-of-type(2) {
+                      &::before {
+                      position: relative;
+                      margin-right: 15px;
+                      content: url(./img/phone.svg);
+                      }
+                  }
+                  p:nth-of-type(3) {
+                      &::before {
+                      position: relative;
+                      margin-right: 15px;
+                      content: url(./img/phone.svg);
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,183 @@
+@import '../variables_course.scss';
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(../fonts/ProximaNova-Bold.ttf);
+    font-size: 16px; 
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaExtrabld';
+    src: url(../fonts/ProximaNova-Extrabld.ttf);
+    font-size: 24px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url(../fonts/ProximaNova-Semibold.ttf);
+    font-size: 16px;
+    color: $dark;
+}
+@font-face {
+    font-family: 'Intro';
+    src: url(../fonts/Intro.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, a, li {
+    text-decoration: none;
+    list-style: none;
+    color: black;   
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1160px;
+}
+
+section {
+  position: relative;
+  padding: 0;
+  nav {
+      position: absolute;
+      z-index: 200;
+      right: 0;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+          width: 56px;
+          height: 56px;
+          margin: 5px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid #DADADA;
+          border-radius: 5px;
+          transition: all 0.3s;
+
+
+          &:hover {
+              background-color: $teal;
+              border-color: $teal;
+              svg {
+                  path {
+                      fill: #fff;
+                  }
+              }
+          }
+      }
+  }
+  .container {
+      position: relative;
+      .dropdown {
+          position: relative;
+
+          .dropdown_switcher {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 30px 0 ;
+              cursor: pointer;
+              .left_dropdown_switcher_block {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  // width: 50%;
+                  .short_line {
+                      height: 2px;
+                      width: 22px;
+                      background-color: $dark;
+                  }
+                  h2 {
+                      font-family: 'ProximaNovaBold';
+                      font-size: 32px;
+                      word-wrap: normal;
+                      margin-left: 10px;
+                      width: 235px;
+                  }
+              }
+              img {
+                  transition: 0.5s;
+                  transform: rotate(0deg) scale(1);
+              }
+              .long_line {
+                position: relative;
+                width: 80%;
+                height: 3px;
+                margin: 0 10px;
+                background-color: #F1F1F1;
+
+              }
+          }
+          #big_dropdown_module_purposes {
+              display: none;
+          }
+          #big_dropdown_module_purposes:checked + .dropdown_list {
+              display: none;
+          }
+      }   
+  }
+}
+@media screen and (max-width: 780px) { 
+.module_purposes {
+      padding: 0;
+      nav {
+          position: relative;
+          z-index: 200;
+          top: 0;
+          padding-top: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center; 
+          padding: 20px 0;
+          background-color: #FAFAFA;  
+      }
+      .container {
+          width: 95%;
+          .dropdown {
+              .dropdown_switcher {
+                  .left_dropdown_switcher_block {
+                      h2 {
+                          font-size: 24px;
+                          width: 173px;
+                      }
+                  }
+              }
+              
+              .dropdown_list {
+                  .dropdown_block {
+                      h3 {
+                          font-size: 16px;
+                      }
+                      .dropdown_item_content {
+                          .dropdown_item {
+                              .dropdown_item_text {
+                                  .item_text {
+                                      font-size: 14px;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

@@ -51,6 +51,7 @@ ul, a, li {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap;
         a {
             font-family: 'ProximaNovaBold';
             color: #979FAD;
